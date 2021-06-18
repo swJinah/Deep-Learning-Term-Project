@@ -37,5 +37,22 @@ Default Choice:
 
 ## teamb.ipynb
 
+We proceed with hyperparameter tuning to the resnet18 model using Tuner.ipynb.
+
+Tuner settings are as follows.
+
+~~~
+lr_list = [0.1, 0.01]
+optim_list = ['sgd', 'adam']
+scheduler_list = ['multistep', 'none']
+test_ratio_list = [0.1, 0.2]
+
+tuning = TuneParams()
+tuning.custom_input(lr_list, optim_list, scheduler_list, test_ratio_list)
+~~~
+
+Please refer to the file and use the tuner.
+
+<br>
 
 If you want more information, please visit our wiki.
